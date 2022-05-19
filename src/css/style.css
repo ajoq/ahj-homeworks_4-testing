@@ -1,0 +1,55 @@
+.cards {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.cards-item {
+    display: flex;
+    padding: 5px;
+}
+
+.card {
+    width: 60px;
+    height: 38px;
+    text-indent: -9999px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.visa {
+    background-image: url(../img/visa.jpg);
+}
+
+.master {
+    background-image: url(../img/mastercard.jpg);
+}
+
+.mir {
+    background-image: url(../img/mir.jpg);
+}
+
+.amex {
+    background-image: url(../img/amex.jpg);
+}
+
+.discover {
+    background-image: url(../img/discover.jpg);
+}
+
+.jcb {
+    background-image: url(../img/jcb.jpg);
+}
+
+.diners_club {
+    background-image: url(../img/diners_club.jpg);
+}
+
+.form-group__input,
+.form-group__button {
+    padding: 6px 12px;
+}
