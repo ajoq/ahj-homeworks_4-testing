@@ -22,12 +22,14 @@
     <form id="form" novalidate="novalidate">
         <div class="form-group">
             <input class="form-group__input" id="card-number" name="card-number" type="text" placeholder="Номер карты">
+            <div class="tooltip">Введите номер карты</div>
             <button class="form-group__button" type="submit" id="submitform">Проверить</button>
         </div>
     </form>
     <div class="result">
-        <div class="luhn-succes">Номер прошел проверку алгоритмом Луна!</div>
-        <div class="luhn-error">Номер не прошел проверку алгоритмом Луна</div>
+        <div class="result-validate luhn-succes"> <img src="./img/checked.png" alt="Номер прошел проверку алгоритмом Луна"> Номер прошел проверку алгоритмом Луна!</div>
+        <div class="result-validate luhn-error"> <img src="./img/unchecked.png" alt="Номер не прошел проверку алгоритмом Луна"> Номер не прошел проверку алгоритмом Луна</div>
+        <div class="result-validate no-bank">К сожалению, принадлежность карты не определена</div>
     </div>
 </body>
 </html>
