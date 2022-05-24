@@ -7,11 +7,12 @@ const luhnError = document.querySelector('.luhn-error');
 const noBankError = document.querySelector('.no-bank');
 
 formInput.addEventListener('input', (e) => {
+    const num = e.target.value.replace(/ /g, '');
     clearMessages();
     clearCardStyles();
-    checkBank(e.target.value);
-    if (e.target.value === '') return;
-    checkCardNumber(e.target.value);
+    checkBank(num);
+    if (num === '') return;
+    checkCardNumber(num);
 });
 
 form.addEventListener('submit', (e) => formSubmit(e));
@@ -20,7 +21,7 @@ function formSubmit(e) {
     e.preventDefault();
     clearMessages();
 
-    let num = formInput.value.trim();
+    const num = formInput.value.replace(/ /g, '');
 
     if (!checkCardNumber(num)) return;
 
@@ -31,7 +32,7 @@ function formSubmit(e) {
     }
 
     if (!checkBank(num)) {
-        console.log('К сожалению, принадлежность карты не определена'); // Тут не корректно, поправить
+        noBankError.classList.add('display')
     }
 }
 
@@ -82,39 +83,46 @@ function checkBank(value) {
     //VISA
     if (value.startsWith(4)) {
         showBank('.visa');
+        return true;
     }
 
     //MasterCard
     if (value.match(/^5[1-5]/) || value.substring(0, 4) >= 2221 && value.substring(0, 4) <= 2720) {
         showBank('.master');
+        return true;
     }
 
     // // МИР
     if (value.match(/^220[0-4]/)) {
         showBank('.mir');
+        return true;
     }
 
     //American Express
     if (value.match(/^3[47]/)) {
         showBank('.amex');
+        return true;
     }
 
     //Discover
     if (value.startsWith(6011)) {
         showBank('.discover');
+        return true;
     }
 
     //JCB
     if (value.startsWith(2131) || value.startsWith(1800) || value.startsWith(35)) {
         showBank('.jcb');
+        return true;
     }
 
     // Diners Club
     if (value.match(/^30[0-5]/) || value.startsWith(36) || value.startsWith(38)) {
         showBank('.diners_club');
+        return true;
     }
 
-    return;
+    return false;
 }
 
 function showBank(bankName) {
