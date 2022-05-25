@@ -30,7 +30,7 @@ export default class ValidateForm {
     const num = e.target.value.replace(/ /g, '');
     this.clearMessages();
     this.clearCardStyles();
-    checkBank(num, this.showBank.bind(this));
+    this.showBank(checkBank(num));
     if (num === '') return;
     this.checkCardNumber(num);
   }
@@ -66,7 +66,7 @@ export default class ValidateForm {
 
     this.checkLuhnDom(checkLuhn(num));
 
-    if (!checkBank(num, this.showBank.bind(this))) {
+    if (!this.showBank(checkBank(num))) {
       this.showNoBankError();
     }
   }
@@ -76,7 +76,11 @@ export default class ValidateForm {
       item.classList.add('cards-opacity');
     });
 
-    document.querySelector(bankName).closest('.cards-opacity').classList.remove('cards-opacity');
+    if (!bankName) return false;
+
+    document.querySelector(`.${bankName}`).closest('.cards-opacity').classList.remove('cards-opacity');
+
+    return true;
   }
 
   showNoBankError() {
