@@ -1,6 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/w0h088un7t58qy3h?svg=true)](https://ci.appveyor.com/project/ajoq/ahj-homeworks-4-testing)
 
-https://ajoq.github.io/ahj-homeworks-4-testing/
+https://ajoq.github.io/ahj-homeworks_4-testing/
 
 ### Credit Card Validator
 
