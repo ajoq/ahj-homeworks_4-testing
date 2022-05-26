@@ -1,4 +1,4 @@
-import checkBank from '../checkBank';
+import checkBank from './checkBank';
 
 test.each([
   ['4929835210176292', 'visa'],

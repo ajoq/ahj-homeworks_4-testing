@@ -1,4 +1,4 @@
-import checkLuhn from '../checkLuhn';
+import checkLuhn from './checkLuhn';
 
 test.each([
   ['4929835210176292', true],
