@@ -30,8 +30,8 @@ export default class ValidateForm {
     const num = e.target.value.replace(/ /g, '');
     this.clearMessages();
     this.clearCardStyles();
-    this.showBank(checkBank(num));
     if (num === '') return;
+    this.showBank(checkBank(num));
     this.checkCardNumber(num);
   }
 
