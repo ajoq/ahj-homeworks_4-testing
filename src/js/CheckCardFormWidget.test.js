@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import CheckCardFormWidget from './CheckCardFormWidget';
 
 test('should render self', () => {

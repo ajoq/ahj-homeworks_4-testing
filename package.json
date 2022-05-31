@@ -44,8 +44,5 @@
     "show:doc": "live-server doc",
     "preshow:dist": "npm run build",
     "show:dist": "live-server dist"
-  },
-  "jest": {
-      "testEnvironment": "jsdom"
   }
 }
