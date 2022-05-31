@@ -63,6 +63,27 @@
     display: none;
 }
 
+.result-validate::before {
+    content: "";
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.luhn-succes::before {
+    background-image: url(../img/checked.png);
+}
+
+.luhn-error::before {
+    background-image: url(../img/unchecked.png);
+}
+
+.no-bank::before {
+    content: none;
+}
+
 .tooltip {
     position: absolute;
     font-size: 14px;

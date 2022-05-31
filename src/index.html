@@ -8,28 +8,10 @@
     <title>ahj-homeworks_4-testing_4.1-credit-card-validator</title>
 </head>
 <body>
-    <h1>Проверьте номер банковской карты</h1>
-    <p>Алгоритм проверит валидность номера карты по <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%9B%D1%83%D0%BD%D0%B0">алгоритму Луна</a> и принадлежность к платежной системе.</p>
-    <ul class="cards">
-        <li class="cards-item"><span class="card visa" title="Visa">Visa</span></li>
-        <li class="cards-item"><span class="card master" title="Mastercard">Mastercard</span></li>
-        <li class="cards-item"><span class="card mir" title="МИР">МИР</span></li>
-        <li class="cards-item"><span class="card amex" title="American Express">American Express</span></li>
-        <li class="cards-item"><span class="card discover" title="Discover">Discover</span></li>
-        <li class="cards-item"><span class="card jcb" title="JCB">JCB</span></li>
-        <li class="cards-item"><span class="card diners_club" title="Diners Club">Diners Club</span></li>
-    </ul>
-    <form id="form" novalidate="novalidate">
-        <div class="form-group">
-            <input class="form-group__input" id="card-number" name="card-number" type="text" placeholder="Номер карты">
-            <div class="tooltip">Введите номер карты</div>
-            <button class="form-group__button" type="submit" id="submitform">Проверить</button>
-        </div>
-    </form>
-    <div class="result">
-        <div class="result-validate luhn-succes"> <img src="./img/checked.png" alt="Номер прошел проверку алгоритмом Луна"> Номер прошел проверку алгоритмом Луна!</div>
-        <div class="result-validate luhn-error"> <img src="./img/unchecked.png" alt="Номер не прошел проверку алгоритмом Луна"> Номер не прошел проверку алгоритмом Луна</div>
-        <div class="result-validate no-bank">К сожалению, принадлежность карты не определена</div>
-    </div>
+    <section>
+        <h1>Проверьте номер банковской карты</h1>
+        <p>Алгоритм проверит валидность номера карты по <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%9B%D1%83%D0%BD%D0%B0">алгоритму Луна</a> и принадлежность к платежной системе.</p>
+        <div class="validate-form"></div>
+    </section>
 </body>
 </html>

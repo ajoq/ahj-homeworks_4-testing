@@ -1,4 +1,5 @@
-import ValidateForm from './ValidateForm';
+import CheckCardFormWidget from './CheckCardFormWidget';
 
-const form = new ValidateForm();
-form.events();
+const validateForm = document.querySelector('.validate-form');
+const widget = new CheckCardFormWidget(validateForm);
+widget.bindToDOM();

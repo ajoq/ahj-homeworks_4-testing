@@ -10,6 +10,7 @@ export default class ValidateForm {
     this.luhnSucces = document.querySelector('.luhn-succes');
     this.luhnError = document.querySelector('.luhn-error');
     this.noBankError = document.querySelector('.no-bank');
+    this.events();
   }
 
   events() {
