@@ -4,7 +4,7 @@ jest.setTimeout(30000);
 describe('Card number form', () => {
   let browser = null;
   let page = null;
-  const baseUrl = 'http://localhost:9000';
+  const baseUrl = 'http://localhost:8888';
 
   beforeAll(async () => {
     browser = await puppeteer.launch({
