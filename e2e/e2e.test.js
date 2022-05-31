@@ -1,15 +1,16 @@
 import puppeteer from 'puppeteer';
-const childProcess = require('child_process');
+import { fork } from 'child_process';
 
 jest.setTimeout(30000);
 
 describe('Card number form', () => {
   let browser = null;
   let page = null;
+  let server = null;
   const baseUrl = 'http://localhost:8888';
 
   beforeAll(async () => {
-    server = await.childProcess.fork(`${__dirname}/e2e.server.js`);
+    server = fork(`${__dirname}/js/e2e/e2e.server.js`);
 
     await new Promise((resolve, reject) => {
       server.on('error', reject);
